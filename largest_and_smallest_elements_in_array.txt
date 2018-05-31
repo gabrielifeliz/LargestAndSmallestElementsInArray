@@ -1,0 +1,95 @@
+Find the largest element of an array
+In this example. the elements of an array are searched 
+ to determine which element is the largest. 
+The algorithm starts by putting the first element of the array 
+ into the variable called largest_element. 
+And then looks at the other elements of the array to see 
+ if a larger value exists.
+
+The largest value is then printed.
+
+Find_largest_element
+Set largest_element to array(0)
+FOR index = 1 to number_of_elements
+
+ENDFOR
+Print largest_element
+END
+
+
+1. Change the solution above to find the smallest element of an array
+2. Combine the solutions above to find both the largest 
+ and smallest elements of an array
+----------------------------------------------------------------
+
+1. -----------------------------------------------------------------
+PSEUDOCODE
+Smallest_element_of_an_array
+Find_smallest_element
+	Set smallest_element to array(0)
+	FOR index = 1 to number_of_elements
+		IF array(index) < smallest_element
+			Set smallest_element to array(index)
+		ENDIF	
+	ENDFOR
+	Print smallest_element
+END
+
+CHECKS
+array(0) = 8, array(1) = 4, array(2) = 7
+smallest_element should be 4
+	smallest_element = 8
+	4 is less than 8 so smallest_element = 4
+	7 is not less than 4 so smallest_element still equals 4
+	
+array(0) = 4.9, array(1) = 1.6, array(2) = 7.4, array(3) = 2.5
+smallest_element should be 1.6
+	smallest_element = 4.9
+	1.6 is less than 4.9 so smallest_element = 1.6
+	7.4 is not less than 1.6 so smallest_element still equals 1.6
+	2.5 is not less than 1.6 so smallest_element still equals 1.6
+--------------------------------------------------------------------
+
+2. -----------------------------------------------------------------
+PSEUDOCODE
+Largest_and_smallest_element_of_an_array
+
+
+END
+	Set smallest_element to array(0)
+	Set largest_element to array(0)
+	FOR index = 1 to number_of_elements
+		IF array(index) < smallest_element
+			Set smallest_element to array(index)
+		ENDIF
+		IF array(index) > largest_element
+			Set largest_element to array(index)
+		ENDIF		
+	ENDFOR
+	Print smallest_element
+
+CHECKS
+array(0) = 8, array(1) = 4, array(2) = 7
+smallest_element should be 4
+largest_element should be 8
+	smallest_element = 8
+	4 is less than 8 so smallest_element becomes 4
+	7 is not less than 4 so smallest_element still equals 4
+	
+	largest_element = 8
+	4 is not greater than 8 so largest_element still equals 8
+	7 is not greater than 8 so largest_element still equals 8
+	
+array(0) = 4.9, array(1) = 1.6, array(2) = 7.4, array(3) = 2.5
+smallest_element should be 1.6
+largest_element should be 7.4
+	smallest_element = 4.9
+	1.6 is less than 4.9 so smallest_element becomes 1.6
+	7.4 is not less than 1.6 so smallest_element still equals 1.6
+	2.5 is not less than 1.6 so smallest_element still equals 1.6
+	
+	largest_element = 4.9
+	1.6 is not greater than 4.9 so largest_element still equals 4.9
+	7.4 is greater than 4.9 so largest_element becomes 7.4
+	2.5 is not greater than 7.4 so largest_element still equals 7.4
+--------------------------------------------------------------------
